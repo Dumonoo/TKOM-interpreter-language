@@ -1,0 +1,11 @@
+num pow(num l, num p){
+    if (p == 0){
+        return 1;
+    }
+    return l * pow(l, p - 1);
+}
+
+void main(){
+    # Wypisze Potega 2 do 3: 8
+    print("Potega 2 do 3: ", pow(2, 3));
+}

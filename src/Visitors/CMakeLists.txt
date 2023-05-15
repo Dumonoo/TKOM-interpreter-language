@@ -1,0 +1,3 @@
+add_subdirectory(LogVisitor)
+add_subdirectory(SemanticVisitor)
+add_subdirectory(InterpreterVisitor)

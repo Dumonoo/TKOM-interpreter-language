@@ -1,0 +1,19 @@
+enable_testing()
+
+add_executable(lexerAdvanceTests lexerAdvanceTests.cpp)
+add_executable(lexerSingleTokens lexerSingleTokens.cpp)
+add_executable(lexerExampleTests lexerExampleTests.cpp)
+
+target_link_libraries(lexerAdvanceTests PUBLIC gtest_main)
+target_link_libraries(lexerAdvanceTests PUBLIC Lexer)
+
+target_link_libraries(lexerSingleTokens PUBLIC gtest_main)
+target_link_libraries(lexerSingleTokens PUBLIC Lexer)
+
+target_link_libraries(lexerExampleTests PUBLIC gtest_main)
+target_link_libraries(lexerExampleTests PUBLIC Lexer)
+
+include(GoogleTest)
+gtest_discover_tests(lexerAdvanceTests)
+gtest_discover_tests(lexerSingleTokens)
+gtest_discover_tests(lexerExampleTests)

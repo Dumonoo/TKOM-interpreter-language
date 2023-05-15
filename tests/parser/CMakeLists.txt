@@ -1,0 +1,29 @@
+enable_testing()
+
+add_executable(parserBasicTests parserBasicTests.cpp)
+
+add_executable(configParserTests configParserTests.cpp)
+
+add_executable(parserThrowTests parserThrowTests.cpp)
+
+
+target_link_libraries(parserBasicTests PUBLIC gtest_main)
+target_link_libraries(parserBasicTests PUBLIC Lexer)
+target_link_libraries(parserBasicTests PUBLIC Parser)
+target_link_libraries(parserBasicTests PUBLIC ConfigParser)
+
+target_link_libraries(configParserTests PUBLIC gtest_main)
+target_link_libraries(configParserTests PUBLIC Lexer)
+target_link_libraries(configParserTests PUBLIC Parser)
+target_link_libraries(configParserTests PUBLIC ConfigParser)
+
+
+target_link_libraries(parserThrowTests PUBLIC gtest_main)
+target_link_libraries(parserThrowTests PUBLIC Lexer)
+target_link_libraries(parserThrowTests PUBLIC Parser)
+target_link_libraries(parserThrowTests PUBLIC ConfigParser)
+
+include(GoogleTest)
+gtest_discover_tests(parserBasicTests)
+gtest_discover_tests(configParserTests)
+gtest_discover_tests(parserThrowTests)

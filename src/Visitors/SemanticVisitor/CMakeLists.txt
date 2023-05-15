@@ -1,0 +1,3 @@
+add_library(SemanticVisitor SemanticVisitor.cpp)
+
+target_link_libraries(SemanticVisitor Environment)

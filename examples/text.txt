@@ -1,0 +1,84 @@
+num totalPart (num n){
+    num total = 0;
+    if(n>0)
+    {
+        while(n>=0)
+        {
+            total = total + 1;
+            n = n - 1;
+        }
+        return total - 1;
+    }
+    else
+    {
+        while(n<=0)
+        {
+            total = total + 1;
+            n = n + 1;
+        }
+        return -total + 1;
+    }
+    return 0;
+}
+
+num silnia(num n){
+    if(n<0){
+        return 0;
+    }
+    n = totalPart(n);
+    if(n<2)
+    {
+        return 1;
+    }
+    return n * silnia(n-1);
+}
+
+num todo(num n){
+    n = 200;
+    return 0;
+}
+
+num todo2(num n) {
+    return n * 12;
+}
+
+
+void main(){
+    print(silnia(12), "\n");
+    #print("Podaj swoja wyplate:");
+    #num input = scanNum();
+    #print("Podaj identyfikator waluty w ktorej dostajesz wyplate:");
+    #cur inputCur = scanCur();
+    #print("Wypisuje twoja wyplate w USD = ", (input @ inputCur) USD);
+
+    num testZmiennych = 20;
+    print(testZmiennych, "\n");
+    if(testZmiennych == 20){
+        testZmiennych = 30;
+    }
+    print("zmienna testZmiennych zmienila wartosc z 20 na: ", testZmiennych, "\n");
+    num testZmiennych2 = 20;
+    if(testZmiennych2 == 20){
+        num testZmiennych2 = 800;
+        print("Zmienna testZmiennych2 jest przykryta przez zmienna w scopie ", testZmiennych2, "\n");
+    }
+    print("Ale po wyjcisu powraca stara wartosc ", testZmiennych2, "\n");
+
+    num testWywolania = 45;
+    print(todo(testWywolania), " ", testWywolania, "\n");
+    testWywolania = todo2(testWywolania);
+    print(testWywolania, " ", todo2(testWywolania), " ", testWywolania, "\n");
+
+    cur payday = 1500 PLN;
+    cur prezes = 10000 USD;
+    if(payday >= prezes){
+        print("Zarabiasz wiecej niz prezes");
+    }
+    num counter = 0;
+    while(payday < prezes){
+        counter = counter + 1;
+        prezes = (prezes - payday) @ prezes;
+    }
+    print(counter);
+
+}

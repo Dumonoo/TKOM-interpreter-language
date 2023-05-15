@@ -1,0 +1,18 @@
+num pow(num l, num p){
+    if(p == 0){
+        return 1;
+    }
+    return 1 * pow(l, p-1);
+#$
+}
+
+cur budget(cur salary, num months){
+    cur a = 200 USD;
+    cur b = 200PLN
+    return ((salary @b) * 0.23 - 200 CAD)@a;
+}
+void main(){
+    # Wypisze Potega 2 do 3: 8
+    print("Potega 2 do 3: ", pow(2, 3)); cur salary = 2.252300000000000000000000000000000 USD; print("testing esc\vape char\acter \n"); print(" "); cur salary2 = 2.2523000000000000000000000000 PLN; print("test2 escape char \b ");
+    num i = 200000000;
+}

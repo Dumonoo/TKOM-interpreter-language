@@ -1,0 +1,9 @@
+add_library(AssignmentStatement AssignmentStatement.cpp)
+add_library(FunctionCallStatement FunctionCallStatement.cpp)
+add_library(FunctionDefinition FunctionDefinition.cpp)
+add_library(IfStatement IfStatement.cpp)
+add_library(InitializeStatement InitializeStatement.cpp)
+add_library(ReturnStatement ReturnStatement.cpp)
+add_library(WhileStatement WhileStatement.cpp)
+
+add_library(EmbeddedFunction EmbeddedFunction.cpp)

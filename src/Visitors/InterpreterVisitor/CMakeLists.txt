@@ -1,0 +1,3 @@
+add_library(InterpreterVisitor InterpreterVisitor.cpp)
+
+target_link_libraries(InterpreterVisitor Environment)

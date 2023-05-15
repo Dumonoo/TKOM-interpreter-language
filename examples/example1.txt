@@ -1,0 +1,28 @@
+cur currencyFun(cur a, num b){
+	if(b < 2) {
+		return (a * b) @ a;
+	}
+	if(b > 3) {
+		return (a * b) CAD;
+	}
+	else{
+			return (a * b) USD;}
+}
+num numericFun(cur a, cur b, num c){
+	if(a > b){
+		return 0;
+	}
+	if(a < b){
+		return 1;
+	}
+	else{
+		return c;
+	}
+}
+void main(){
+	cur c = currencyFun (20 PLN, 2);
+    #print(c);
+	num d = numericFun (33.14 USD, 30 PLN, 5);
+	print("Wartosc c: ", c, " wartosc d: ", d);
+	# wypisze Wartosc c: 40 wartosc d: 0
+}
